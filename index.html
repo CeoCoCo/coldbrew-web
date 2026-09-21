@@ -3,86 +3,374 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cold Brew — Tỉnh giấc hiện tại, đỉnh chất tương lai." />
-  <title>Cold Brew</title>
+  <meta name="theme-color" content="#11110f" />
+  <meta name="description" content="Mood Brew — Cold Brew sấy thăng hoa theo khẩu phần, gọn cho nhịp sống đô thị." />
+  <meta property="og:title" content="Mood Brew — Cold Brew for every mood" />
+  <meta property="og:description" content="Cold Brew dạng gói: nhanh, gọn và linh hoạt cho nhịp sống đô thị." />
+  <title>Mood Brew — Cold Brew for every mood</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header class="nav">
-    <a class="brand" href="#">COLD BREW</a>
-    <nav>
-      <a href="#about">Sản phẩm</a>
+<body data-mood="focus">
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="logo" href="#top" aria-label="Mood Brew home">
+      <span class="logo-mark">M</span>
+      <span class="logo-text">MOOD BREW</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span>
+      <span class="sr-only">Mở menu</span>
+    </button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+      <a href="#story">Concept</a>
+      <a href="#product">Sản phẩm</a>
       <a href="#brew">Cách pha</a>
+      <a href="#survey" class="nav-cta">Khảo sát</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero__content">
-        <p class="eyebrow">COLD BREW • EASY BREW</p>
-        <h1>Tỉnh giấc hiện tại.<br><span>Đỉnh “chất” tương lai.</span></h1>
-        <p class="lead">
-          Một cách thưởng thức cà phê pha lạnh gọn hơn cho nhịp sống đô thị:
-          dễ chuẩn bị, dễ mang theo và giữ trọn trải nghiệm mượt mà của Cold Brew.
+      <div class="hero-copy reveal">
+        <div class="kicker-row">
+          <p class="eyebrow">FREEZE-DRIED COLD BREW · 10 × 10G</p>
+          <span class="status-dot"><i></i> brewed for now</span>
+        </div>
+
+        <h1>
+          Cold brew cho<br />
+          <em>mọi nhịp mood.</em>
+        </h1>
+
+        <p class="hero-lead">
+          Mood Brew đưa trải nghiệm Cold Brew vào một format gọn hơn:
+          chiết xuất lạnh, sấy thăng hoa và chia sẵn từng khẩu phần để bạn
+          pha nhanh ở bất cứ đâu.
         </p>
-        <div class="actions">
-          <a class="btn btn--primary" href="#about">Khám phá sản phẩm</a>
-          <button class="btn btn--ghost" id="demoBtn" type="button">Thử nút demo</button>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#product">
+            Khám phá Mood Brew
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a class="button button-text" href="#brew">
+            Xem cách pha
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <div class="mood-switcher" aria-label="Chọn mood hiển thị">
+          <span>Set your mood</span>
+          <div class="mood-buttons">
+            <button class="mood-chip active" type="button" data-set-mood="focus" aria-pressed="true">Focus</button>
+            <button class="mood-chip" type="button" data-set-mood="flow" aria-pressed="false">Flow</button>
+            <button class="mood-chip" type="button" data-set-mood="slow" aria-pressed="false">Slow</button>
+          </div>
         </div>
       </div>
 
-      <div class="product-card" aria-label="Minh hoạ sản phẩm Cold Brew">
-        <div class="pack">
-          <span>10 × 10g</span>
-          <strong>COLD<br>BREW</strong>
-          <small>SMOOTH • CLEAN • CONVENIENT</small>
+      <div class="hero-visual reveal" aria-label="Minh họa bao bì Mood Brew">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+
+        <div class="product-stage">
+          <div class="pouch-shadow"></div>
+          <div class="pouch">
+            <div class="pouch-seal"></div>
+            <div class="pouch-topline">
+              <span>VIETNAM</span>
+              <span>10 × 10G</span>
+            </div>
+
+            <div class="pouch-brand">
+              <span>MOOD</span>
+              <span>BREW</span>
+            </div>
+
+            <div class="pouch-orbit" aria-hidden="true">
+              <span></span>
+            </div>
+
+            <div class="pouch-bottom">
+              <p>COLD BREW<br />CRYSTALS</p>
+              <small>QUALITY · CONVENIENCE · PORTABILITY</small>
+            </div>
+          </div>
+
+          <div class="sachet sachet-one">
+            <span>MB</span>
+            <small>10G</small>
+          </div>
+          <div class="sachet sachet-two">
+            <span>MB</span>
+            <small>10G</small>
+          </div>
+
+          <div class="glass">
+            <div class="glass-rim"></div>
+            <div class="coffee">
+              <span class="ice ice-1"></span>
+              <span class="ice ice-2"></span>
+              <span class="ice ice-3"></span>
+            </div>
+          </div>
+
+          <div class="float-tag tag-a">NO STEEPING<br />OVERNIGHT</div>
+          <div class="float-tag tag-b">JUST ADD<br />COOL WATER</div>
         </div>
-        <div class="cup">
-          <div class="ice ice--1"></div>
-          <div class="ice ice--2"></div>
-          <div class="ice ice--3"></div>
+
+        <div class="hero-specs">
+          <div>
+            <strong>10g</strong>
+            <span>mỗi khẩu phần</span>
+          </div>
+          <div>
+            <strong>120–130ml</strong>
+            <span>nước mát</span>
+          </div>
+          <div>
+            <strong>70–80g</strong>
+            <span>đá gợi ý</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-note" href="#story">
+        <span>SCROLL TO BREW</span>
+        <i></i>
+      </a>
+    </section>
+
+    <section class="ticker" aria-label="Giá trị cốt lõi">
+      <div class="ticker-track">
+        <span>QUALITY</span><i>✦</i>
+        <span>CONVENIENCE</span><i>✦</i>
+        <span>PORTABILITY</span><i>✦</i>
+        <span>QUALITY</span><i>✦</i>
+        <span>CONVENIENCE</span><i>✦</i>
+        <span>PORTABILITY</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="story section-pad" id="story">
+      <div class="section-label reveal">
+        <span>01</span>
+        <p>THE MOOD BREW IDEA</p>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-heading reveal">
+          <p class="eyebrow">COLD BREW, REFRAMED</p>
+          <h2>
+            Không phải “instant coffee”.<br />
+            <em>Là Cold Brew theo cách mới.</em>
+          </h2>
+        </div>
+
+        <div class="story-copy reveal">
+          <p>
+            Cold Brew truyền thống cho trải nghiệm mượt và dịu, nhưng đổi lại bằng
+            thời gian ủ dài. Đồ uống đóng chai tiện hơn, nhưng lại nặng, cồng kềnh
+            và phụ thuộc nhiều hơn vào bảo quản.
+          </p>
+          <p>
+            Mood Brew chọn một hướng khác: bắt đầu bằng chiết xuất lạnh, sau đó
+            chuyển thành dạng bột sấy thăng hoa theo khẩu phần. Công nghệ là phương
+            tiện; điều người dùng nhận được là một trải nghiệm <strong>gọn, linh hoạt
+            và có gu</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="mood-cards">
+        <article class="mood-card reveal">
+          <span class="mood-number">01</span>
+          <div class="mood-icon">●</div>
+          <h3>Focus mode.</h3>
+          <p>Cho buổi học, deadline hoặc lúc bạn muốn tối giản mọi thao tác không cần thiết.</p>
+          <span class="mood-caption">desk / library / studio</span>
+        </article>
+
+        <article class="mood-card reveal">
+          <span class="mood-number">02</span>
+          <div class="mood-icon">◐</div>
+          <h3>Flow mode.</h3>
+          <p>Cho những khoảng giữa ngày — khi bạn vẫn muốn nhịp điệu, nhưng không muốn quá vội.</p>
+          <span class="mood-caption">office / creative / midday</span>
+        </article>
+
+        <article class="mood-card reveal">
+          <span class="mood-number">03</span>
+          <div class="mood-icon">◌</div>
+          <h3>Slow mode.</h3>
+          <p>Cho lúc bạn chỉ muốn thêm đá, bật nhạc và thưởng thức một ly Cold Brew theo gu riêng.</p>
+          <span class="mood-caption">home / chill / after hours</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="product section-pad" id="product">
+      <div class="section-label light reveal">
+        <span>02</span>
+        <p>WHAT'S INSIDE</p>
+      </div>
+
+      <div class="product-intro reveal">
+        <p class="eyebrow light">ONE POUCH · TEN MOMENTS</p>
+        <h2>Nhỏ trong balo.<br /><em>Lớn trong trải nghiệm.</em></h2>
+        <p>
+          Một túi Mood Brew chứa 10 gói nhỏ, mỗi gói 10g. Thiết kế single-serve
+          giúp định lượng đơn giản và phù hợp với nhịp sống di chuyển.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card-big reveal">
+          <span class="feature-index">01 / COLD EXTRACTION</span>
+          <div class="feature-symbol">°C</div>
+          <div>
+            <h3>Cold-brew first.</h3>
+            <p>
+              Nền sản phẩm bắt đầu từ quá trình chiết xuất lạnh — hướng đến cấu trúc
+              hương vị mượt, dịu và ít gắt đặc trưng của Cold Brew.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature-card reveal">
+          <span class="feature-index">02 / FREEZE-DRIED</span>
+          <div class="feature-symbol">❄</div>
+          <div>
+            <h3>Format gọn hơn.</h3>
+            <p>
+              Sấy thăng hoa giúp chuyển dịch Cold Brew từ dạng lỏng sang format
+              nhẹ, dễ bảo quản và linh hoạt hơn khi mang theo.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature-card reveal">
+          <span class="feature-index">03 / SINGLE SERVE</span>
+          <div class="feature-symbol">10</div>
+          <div>
+            <h3>Mỗi lần một gói.</h3>
+            <p>
+              10g cho một lần pha. Không cân đo phức tạp, không cần mang theo chai
+              Cold Brew nặng khi học, làm việc hoặc di chuyển.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="brew section-pad" id="brew">
+      <div class="section-label reveal">
+        <span>03</span>
+        <p>BREW IT YOUR WAY</p>
+      </div>
+
+      <div class="brew-head reveal">
+        <div>
+          <p class="eyebrow">FROM POUCH TO GLASS</p>
+          <h2>3 bước.<br /><em>Đúng mood.</em></h2>
+        </div>
+        <p>
+          Công thức gợi ý cho một khẩu phần Mood Brew. Bạn vẫn có thể điều chỉnh
+          lượng nước, đá hoặc thêm sữa theo gu cá nhân.
+        </p>
+      </div>
+
+      <div class="steps">
+        <article class="step reveal">
+          <span class="step-num">01</span>
+          <div class="step-visual sachet-visual">
+            <div class="mini-sachet">MOOD<br />BREW <small>10G</small></div>
+          </div>
+          <h3>Tear.</h3>
+          <p>Mở một gói Mood Brew 10g.</p>
+        </article>
+
+        <article class="step reveal">
+          <span class="step-num">02</span>
+          <div class="step-visual water-visual">
+            <div class="water-drop"></div>
+            <strong>120–130</strong><small>ML</small>
+          </div>
+          <h3>Mix.</h3>
+          <p>Hòa cùng nước mát hoặc nước ở nhiệt độ phòng.</p>
+        </article>
+
+        <article class="step reveal">
+          <span class="step-num">03</span>
+          <div class="step-visual ice-visual">
+            <span></span><span></span><span></span>
+          </div>
+          <h3>Ice & mood.</h3>
+          <p>Thêm khoảng 70–80g đá và điều chỉnh theo gu.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="manifesto-inner reveal">
+        <span class="manifesto-mark">M</span>
+        <p>BRAND PROMISE</p>
+        <blockquote>
+          “Tỉnh giấc hiện tại —<br />
+          <em>Đỉnh ‘chất’ tương lai.</em>”
+        </blockquote>
+        <div class="manifesto-note">
+          <span>QUALITY</span>
+          <span>CONVENIENCE</span>
+          <span>PORTABILITY</span>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
-      <p class="eyebrow">VÌ SAO COLD BREW?</p>
-      <h2>Gọn cho một ngày bận rộn.</h2>
-      <div class="features">
-        <article>
-          <span>01</span>
-          <h3>Dễ định lượng</h3>
-          <p>Mỗi gói nhỏ 10g giúp bạn chuẩn bị một phần uống nhanh và ổn định.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Hương vị dịu</h3>
-          <p>Phong cách pha lạnh hướng đến trải nghiệm mượt, ít gắt và dễ thưởng thức.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Mang đi tiện</h3>
-          <p>Thiết kế theo hướng nhỏ gọn, phù hợp học tập, văn phòng và di chuyển.</p>
-        </article>
-      </div>
-    </section>
+    <section class="survey section-pad" id="survey">
+      <div class="survey-card reveal">
+        <div>
+          <p class="eyebrow">HELP US BREW BETTER</p>
+          <h2>Bạn sẽ thử<br /><em>Mood Brew chứ?</em></h2>
+        </div>
 
-    <section class="section brew" id="brew">
-      <div>
-        <p class="eyebrow">GỢI Ý PHA</p>
-        <h2>10g cà phê.<br>120–130ml nước.</h2>
+        <div class="survey-copy">
+          <p>
+            Mood Brew đang ở giai đoạn phát triển concept sản phẩm. Góc nhìn của bạn
+            về hương vị, mức giá, bao bì và thói quen uống cà phê sẽ giúp nhóm hoàn thiện
+            sản phẩm sát với nhu cầu thực tế hơn.
+          </p>
+          <button class="button button-primary survey-button" id="surveyButton" type="button" data-survey-url="">
+            Làm khảo sát
+            <span aria-hidden="true">↗</span>
+          </button>
+          <small>Khoảng 2–3 phút · Không yêu cầu đăng nhập trên website</small>
+        </div>
       </div>
-      <p>
-        Ngâm với nước mát hoặc nước ở nhiệt độ phòng, sau đó thêm đá theo khẩu vị.
-        Đây là trang demo đầu tiên để kiểm tra quy trình GitHub → Vercel.
-      </p>
     </section>
   </main>
 
-  <footer>
-    <span>© 2026 Cold Brew Project</span>
-    <span>Built with GitHub + Vercel</span>
+  <footer class="site-footer">
+    <a class="logo footer-logo" href="#top">
+      <span class="logo-mark">M</span>
+      <span class="logo-text">MOOD BREW</span>
+    </a>
+
+    <p>Cold Brew for every mood.</p>
+
+    <div class="footer-meta">
+      <span>HCMC · 2026</span>
+      <span>Marketing Project</span>
+    </div>
   </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    Thêm link Google Forms vào <code>data-survey-url</code> để bật nút khảo sát.
+  </div>
 
   <script src="script.js"></script>
 </body>
